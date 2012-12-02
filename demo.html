@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>jQuery.hesitate test</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.hesitate.js"></script>
+
+<style type="text/css">
+#secret {
+	display: none;
+}
+</style>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('#trigger').hesitate({time: 700}, function() {
+		$('#secret').show();
+	});
+	$('#hide_link').click(function(e) {
+		e.preventDefault();
+		$('#secret').hide();
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+I have a <span id="trigger">secret</span> for you!<br />
+<div id="secret">Or not :p <a href="#" id="hide_link">hide me</a></div>
+
+</body>
+</html>
