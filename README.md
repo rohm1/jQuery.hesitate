@@ -22,7 +22,7 @@ Parameters:
 I kown, this is not literally an event, but it works the same as when you bind the mouseover event with .mouseover().
 
 ##Licence##
-Copyright (c) 2012, rohm1 <rp@rohm1.com>.
+Copyright (c) 2012-2013, rohm1 <rp@rohm1.com>.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2012, rohm1 <rp@rohm1.com>.
+Copyright (c) 2012-2013, rohm1 <rp@rohm1.com>.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -43,14 +43,14 @@ POSSIBILITY OF SUCH DAMAGE.
 			}
 
 			$(this).each(function() {
-				$(this).live('mouseenter', function() {
+				$(this).on('mouseenter', function() {
 					var t = $(this).data('hesitateIn', true);
 					setTimeout(function() {
 						if(t.data('hesitateIn')){
 							t.animate({}, 0, fn);}
 						}, params.time);
 					})
-					.live('mouseleave', function() {
+					.on('mouseleave', function() {
 						$(this).data('hesitateIn', false);
 					})
 			});
