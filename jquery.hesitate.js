@@ -43,16 +43,18 @@ POSSIBILITY OF SUCH DAMAGE.
 			}
 
 			$(this).each(function() {
-				$(this).on('mouseenter', function() {
-					var t = $(this).data('hesitateIn', true);
-					setTimeout(function() {
-						if(t.data('hesitateIn')){
-							t.animate({}, 0, fn);}
-						}, params.time);
-					})
-					.on('mouseleave', function() {
+				$(this).on({
+					mouseenter: function() {
+						var t = $(this).data('hesitateIn', true);
+						setTimeout(function() {
+							if(t.data('hesitateIn'))
+								t.animate(0, fn);
+							}, params.time);
+					},
+					mouseleave: function() {
 						$(this).data('hesitateIn', false);
-					})
+					}
+				});
 			});
 
 			return $(this);
