@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
 						var t = $(this).data('hesitateIn', true);
 						setTimeout(function() {
 							if(t.data('hesitateIn'))
-								t.animate(0, fn);
+								fn.call(t);
 							}, params.time);
 					},
 					mouseleave: function() {
